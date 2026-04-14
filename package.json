@@ -1,0 +1,14 @@
+{
+  "name": "gameful.dev",
+  "version": "2.0.0",
+  "description": "Static homepage for Gameful Software Ltd",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jared Rigby",
+  "license": "MIT",
+  "dependencies": {
+    "modern-normalize": "^3.0.1"
+  }
+}

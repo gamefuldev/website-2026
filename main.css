@@ -1,0 +1,235 @@
+:root {
+    --gameful-yellow: #f0ca08;
+    --gameful-black: #000111;
+    --gameful-white: #fffeee;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--gameful-black);
+    background: var(--gameful-white);
+    transition: all 0.2s ease;
+    line-height: 1.5;;
+}
+
+h1 {
+    font-weight: 200;
+}
+
+h2 {
+    text-transform: uppercase;
+    margin-top: 0;
+}
+
+a {
+    font-weight: 600;
+    color: var(--gameful-black);
+    text-decoration-color: var(--gameful-yellow);
+}
+
+img {
+    max-width: 100%;;
+}
+
+svg {
+    max-width: 100%;
+}
+
+main {
+    overflow-x: hidden;
+}
+
+section {
+    padding: 40px;
+}
+
+section:after {
+    display: block;
+    content: "";
+    border-top: 2px solid var(--gameful-yellow);
+    max-width: 30rem;
+    margin: 80px 0 0;
+}
+
+.button {
+    text-decoration: none;
+    background: var(--gameful-black);
+    color: var(--gameful-white);
+    display: inline-block;
+    padding: 5px 20px;
+    font-weight: 400;
+    font-size: 20px;
+    margin-top: 20px;
+    transition: all 0.2s ease;
+}
+
+.button:hover {
+    font-weight: 700;
+    color: var(--gameful-yellow);
+}
+
+.socials {
+    .socials__list {
+        margin: 20px 0;
+        padding: 0;
+        display: flex;
+        gap: 20px;
+        list-style: none;
+        align-items: center;
+    }
+
+    .socials__item {
+        width: 1.5rem;
+        transition: all 0.2s ease;
+    }
+
+    .socials__item:hover {
+        transform: scale(1.25);
+    }
+}
+
+.site-header {
+    position: sticky;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    padding: 20px 40px;
+    transition: background 0.2s ease;
+    background: var(--gameful-white);
+
+    .site-header__title {
+        display: inline-block;
+        text-transform: uppercase;
+        transition: all 0.2s ease;
+        margin: 0;
+        line-height: 1;
+        letter-spacing: 11px;
+        margin-bottom: 5px;
+    }
+
+    .site-header__title span {
+        transition: all 0.2s ease;
+    }
+
+    .site-header__title:hover span {
+        font-weight: 700 !important; 
+        letter-spacing: 15px;
+    }
+
+    .site-header__tagline {
+        margin: 0;
+        line-height: 1;
+        text-transform: lowercase;
+        letter-spacing: 2px;;
+    }
+}
+
+@media screen and (min-width: 40rem) {
+    .site-header {
+        padding: 30px 40px;
+    }
+}
+
+.about {
+    max-width: 70rem;
+
+    .about__headshot {
+        border: 2px solid var(--gameful-yellow);
+    }
+}
+
+@media screen and (min-width: 40rem) {
+   .about {
+        display: flex;
+        align-items: flex-start;
+        gap: 40px;
+
+        strong {
+            display: block;
+            font-size: 120%;
+            margin-bottom: 40px;
+        }
+
+        .about__content {
+            width: 50%;
+        }
+        
+        .about__headshot {
+            height: auto;
+            width: 50%;
+        }
+    } 
+}
+
+.project-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    .project-list__link {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 0;
+        text-decoration: none;
+    }
+
+    .project-list__link:hover .project-list__title {
+        font-weight: 700;
+    }
+
+    .project-list__title {
+        display: inline-block;
+        font-size: clamp(32px, 4vw, 56px);
+        font-weight: 200;
+        transition: all 0.2s ease;
+    }
+
+    .project-list__detail {
+        font-size: 16px;
+        position: relative;
+        bottom: 0.4vw;
+        text-transform: uppercase;
+        display: inline-block;
+        background: var(--gameful-black);
+        color: var(--gameful-white);
+        padding: 5px;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (min-width: 40rem) {
+    .project-list {
+        .project-list__link {
+            flex-direction: row;
+            align-items: flex-end;
+            padding: 5px 0;
+        }
+
+        .project-list__detail {
+            font-size: 14px;
+            position: relative;
+            bottom: clamp(0px, 1.5vw, 22px);
+            text-transform: uppercase;
+            display: inline-block;
+            background: var(--gameful-black);
+            color: var(--gameful-white);
+            padding: 5px;
+            margin-left: 20px;
+        }
+    }
+}
+
+.site-footer {
+    padding: 40px;
+    max-width: 40rem;
+
+    .site-footer__small-print {
+        display: block;
+        opacity: 0.5;
+        margin-top: 40px;
+    }
+}
